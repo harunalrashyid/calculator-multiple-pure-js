@@ -16,60 +16,14 @@ const validateCheckBox = () => {
 	    	if (!e.checked) {
 	    		number[i].setAttribute('disabled', '');
 	    		countChecked -= 1;
-
-	    		// console.log('index: ', i);
-	    		// console.log('checked', countChecked);	
 	    	} else {
 	    		number[i].removeAttribute('disabled');
-	    		countChecked += 1;
-
-	    		// console.log('index: ', i);		    		
-	    		// console.log('checked', countChecked);		    		
+	    		countChecked += 1;	    		
 	    	}
 
 	    	if (countChecked < 2) return alert('check number input minimal 2 (dua)');	        
 	    })
 	});	
-}	
-
-const actionIncrement = () => {
-	operationIncrement.addEventListener('click', function() {
-		extractInputValue(number);
-		resultValue.innerHTML = increment(numberValue);
-		// console.log('increment: ', increment(numberValue));
-
-		resetValue();
-	});
-}
-
-const actionDecrement = () => {
-	operationDecrement.addEventListener('click', function() {
-		extractInputValue(number);
-		resultValue.innerHTML = decrement(numberValue);
-		// console.log('decrement: ', decrement(numberValue));
-
-		resetValue();
-	});
-}
-
-const actionMultiply = () => {
-	operationMultiply.addEventListener('click', function() {
-		extractInputValue(number);
-		resultValue.innerHTML = multiply(numberValue);
-		// console.log('multiply: ', multiply(numberValue));
-
-		resetValue();
-	});
-}
-
-const actionDivide = () => {
-	operationDivide.addEventListener('click', function() {
-		extractInputValue(number);
-		resultValue.innerHTML = divide(numberValue);
-		// console.log('divide: ', divide(numberValue));
-
-		resetValue();
-	});
 }
 
 const extractInputValue = element => {
@@ -101,6 +55,38 @@ const divide = input => {
 const resetValue = () => {
 	return numberValue = [];
 };
+
+const actionIncrement = () => {
+	operationIncrement.addEventListener('click', function() {
+		extractInputValue(number);
+		resultValue.innerHTML = increment(numberValue);
+		resetValue();
+	});
+}
+
+const actionDecrement = () => {
+	operationDecrement.addEventListener('click', function() {
+		extractInputValue(number);
+		resultValue.innerHTML = decrement(numberValue);
+		resetValue();
+	});
+}
+
+const actionMultiply = () => {
+	operationMultiply.addEventListener('click', function() {
+		extractInputValue(number);
+		resultValue.innerHTML = multiply(numberValue);
+		resetValue();
+	});
+}
+
+const actionDivide = () => {
+	operationDivide.addEventListener('click', function() {
+		extractInputValue(number);
+		resultValue.innerHTML = divide(numberValue);
+		resetValue();
+	});
+}
 
 validateCheckBox();
 actionIncrement();
