@@ -74,7 +74,7 @@ const actionDivide = () => {
 
 const extractInputValue = element => {
 	element.forEach((e, i) => { 
-		if(e.value) return numberValue.push(e.value);
+		if(e.value && !e.disabled) return numberValue.push(e.value);
 	});
 };
 
