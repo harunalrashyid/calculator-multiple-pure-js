@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator | Pure JS</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 class="header__title">Calculator</h1>
+		</div>
+		<div class="calculator">
+			<div class="calculator__input-wrapper">
+				<input type="number" class="calculator__number">
+				<input type="checkbox" class="calculator__checkbox" checked>
+			</div>
+			<div class="calculator__input-wrapper">
+				<input type="number" class="calculator__number">
+				<input type="checkbox" class="calculator__checkbox" checked>
+			</div>
+			<div class="calculator__input-wrapper">
+				<input type="number" class="calculator__number">
+				<input type="checkbox" class="calculator__checkbox" checked>
+			</div>
+			<div class="calculator__operation-wrapper">
+				<button class="calculator__btn calculator__operation-increment">+</button>
+				<button class="calculator__btn calculator__operation-subtract">-</button>
+				<button class="calculator__btn calculator__operation-multiply">x</button>
+				<button class="calculator__btn calculator__operation-divide">/</button>
+			</div>
+			<div class="calculator__result-wrapper">
+				<span class="calculator__result-text">Hasil:</span>
+				<span class="calculator__result-value"></span>
+			</div>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</html>
