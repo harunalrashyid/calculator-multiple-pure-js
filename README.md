@@ -1,2 +1,2 @@
-# nusan-tech-calculator
-Test Calculator - Nusantara Technology
+# Calculator Multiple
+Calculator multiple input with pureJS
